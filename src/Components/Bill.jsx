@@ -1,34 +1,57 @@
+import { Button } from "react-bootstrap";
 
-import CompactProfile from 'src/Components/CompactProfile';
+const Bill = () => {
+    return ( 
 
-export default function Bill() {
-  return (
-    
-   <center>
+        <center>
+        <div style={{border: "1px solid black", borderRadius: "80px", width: "40%", padding: "1%", }}>
 
- 
-    <div style={{border: "1px solid black", borderRadius: '5%', width: '80%'}} > 
+<div className="row" >
 
- <div className="row" >
- 
- <div className="col-md-8" style={{alignContent: "flexStart", display: "flex"}} >  
- <h2> Bill Name </h2>
-  <h2> Bill Number </h2>
-  <p> Bill description </p>  
-  </div>
+<div className="col-md-9" style={{textAlign: "left"}} >
 
+<h1><i>Bill Name</i></h1>
+<h3><i>Bill Number</i></h3>
+<p>Bill Description</p>
 
-<div className="col-md-4" >  
-  <CompactProfile />
+</div>
+<div className="col-md-3" style={{textAlign: "center"}}>
+
+<table>
+    <tbody>
+        <tr>
+            <td>
+            <img  src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png" alt="Profile Pic" width="80em" height="80em" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <small>Name</small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <small>Rank</small>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 </div>
 
- 
- </div>
+</div>
+<hr/>
+<div className="row">
+    <div className="col-md-4"><Button variant="primary">Vote</Button>{' '}</div>
+    <div className="col-md-4"><Button variant="primary">Share</Button>{' '}</div>
+    <div className="col-md-4"><Button variant="primary">Claim</Button>{' '}</div>
+</div>
 
-  </div>
 
-	   </center>
-  
-  
-  );
+        </div>
+        </center>
+
+     );
 }
+ 
+export default Bill;

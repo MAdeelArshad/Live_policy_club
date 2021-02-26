@@ -1,37 +1,15 @@
-import React from 'react';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import { Breadcrumb } from "react-bootstrap";
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
+const BreadCrum = () => {
+    return ( 
+<Breadcrumb>
+<Breadcrumb.Item >Home</Breadcrumb.Item>
+{/* <Breadcrumb.Item href="">
+  Library
+</Breadcrumb.Item> */}
+<Breadcrumb.Item active>Governoment</Breadcrumb.Item>
+</Breadcrumb>
+     );
 }
-
-export default function ActiveLastBreadcrumb() {
-  return (
-
-<div>
-<Breadcrumbs aria-label="breadcrumb">
-      <Link color="inherit" href="/" onClick={handleClick}>
-        Material-UI
-      </Link>
-      <Link color="inherit" href="/getting-started/installation/" onClick={handleClick}>
-        Core
-      </Link>
-      <Link
-        color="textPrimary"
-        href="/components/breadcrumbs/"
-        onClick={handleClick}
-        aria-current="page"
-      >
-        Breadcrumb
-      </Link>
-      
-    </Breadcrumbs>
-    <hr style={{ borderTop: "1px solid red"}} />
-</div>
-
-
-    
-  );
-}
+ 
+export default BreadCrum;
