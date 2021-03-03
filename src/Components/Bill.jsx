@@ -4,9 +4,9 @@ const Bill = () => {
     return ( 
 
         <center>
-        <div style={{border: "1px solid black", borderRadius: "80px", width: "40%", padding: "1%", }}>
+        <div style={{border: "1px solid DodgerBlue", borderRadius: "80px", width: "40%", padding: "1%", }}>
 
-<div className="row" >
+<div className="row" style={{margin: "5px"}} >
 
 <div className="col-md-9" style={{textAlign: "left"}} >
 
@@ -41,6 +41,17 @@ const Bill = () => {
 
 </div>
 <hr/>
+
+{/* <table className="table " >
+    <tbody  >
+        <tr>
+            <th>  <Button variant="primary" style={{marginRight: "10%", marginLeft: "10%"}} >Vote</Button>{' '} </th>
+            <th> <Button variant="primary" style={{marginRight: "10%", marginLeft: "10%"}} >Share</Button>{' '}  </th>
+            <th>  <Button variant="primary" style={{marginRight: "10%", marginLeft: "10%"}} >Claim</Button>{' '} </th>
+        </tr>
+    </tbody>
+</table> */}
+
 <div className="row">
     <div className="col-md-4"><Button variant="primary">Vote</Button>{' '}</div>
     <div className="col-md-4"><Button variant="primary">Share</Button>{' '}</div>
