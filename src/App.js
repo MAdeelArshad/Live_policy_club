@@ -14,6 +14,9 @@ import {
 import Elections from './Components/Pages/Elections';
 import UserProfile from './Components/Pages/UserProfile';
 import Policy from './Components/Pages/Policy';
+import Public from './Components/Pages/Public';
+import Home from './Components/Pages/Home';
+import Search from './Components/Pages/Search';
 
 
 function App() {
@@ -25,7 +28,7 @@ function App() {
     <NavBar />
     <Breadcrumb />
     <MenuBar />
-    <h2>Welcome !</h2>
+    
     
    {/* <Governoment /> */}
    {/* <Policy /> */}
@@ -37,8 +40,29 @@ function App() {
     </div>
 
     <Switch>
+    <Route path="/Private">
+            {/* <Governoment /> */}
+    </Route>
+    <Route path="/Public">
+            <Public />
+    </Route>
+    <Route path="/Governoment">
+            <Governoment />
+    </Route>
+    <Route path="/Election">
+            <Elections />
+    </Route>
+    <Route path="/Policy">
+            <Policy />
+    </Route>
+    <Route path="/UserProfile">
+            <UserProfile />
+    </Route>
+    <Route path="/Search">
+            <Search />
+    </Route>
     <Route path="/Home">
-            <App.js />
+            <Home />
     </Route>
 
     </Switch>

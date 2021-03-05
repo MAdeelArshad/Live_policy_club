@@ -5,9 +5,10 @@ import { Breadcrumb } from "../BreadCrum";
 const Home = () => {
     return ( 
     <div>
-        <NavBar />
+        {/* <NavBar />
     <Breadcrumb />
-    <MenuBar />
+    <MenuBar /> */}
+    <center><h2>Welcome !</h2></center>
     </div>
      );
 }
