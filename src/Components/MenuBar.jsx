@@ -14,6 +14,7 @@ const MenuBar = () => {
   <Link to="/Governoment" > <Button variant="outline-secondary">Governoment</Button></Link>{"   "}
   <Link to="/Election" > <Button variant="outline-primary">Elections</Button></Link>{"   "}
   <Link to="/Policy" > <Button variant="outline-dark">Policy</Button></Link>{"   "}
+  <Link to="/About" > <Button variant="outline-warning">About</Button></Link>{"   "}
   <br /> <br />
 </>
      );

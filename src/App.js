@@ -17,6 +17,7 @@ import Policy from './Components/Pages/Policy';
 import Public from './Components/Pages/Public';
 import Home from './Components/Pages/Home';
 import Search from './Components/Pages/Search';
+import About from './Components/Pages/About Page';
 
 
 function App() {
@@ -61,7 +62,13 @@ function App() {
     <Route path="/Search">
             <Search />
     </Route>
+    <Route path="/About">
+            <About />
+    </Route>
     <Route path="/Home">
+            <Home />
+    </Route>
+    <Route path="/">
             <Home />
     </Route>
 
