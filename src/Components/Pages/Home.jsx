@@ -3,14 +3,16 @@ import NavBar from "../NavBar";
 import { Breadcrumb } from "../BreadCrum";
 
 const Home = () => {
-    return ( 
+  return (
     <div>
-        {/* <NavBar />
+      {/* <NavBar />
     <Breadcrumb />
     <MenuBar /> */}
-    <center><h2>Welcome !</h2></center>
+      <center>
+        <h2>Welcome !</h2>
+      </center>
     </div>
-     );
-}
- 
+  );
+};
+
 export default Home;

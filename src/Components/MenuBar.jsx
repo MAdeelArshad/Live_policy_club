@@ -1,37 +1,37 @@
 import { Button } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-const MenuBar = () => {
+const MenuBar = (props) => {
   return (
     <>
       <Link to="/Private">
         {" "}
-        <Button variant="outline-danger">Private</Button>{" "}
+        <Button onClick={()=>{ props.handleBreadCrums("Private")}} variant="outline-danger">Private</Button>{" "}
       </Link>
       {"   "}
       <Link to="/Public">
         {" "}
-        <Button variant="outline-success">Public</Button>
+        <Button onClick={()=>{ props.handleBreadCrums("Public")}} variant="outline-success">Public</Button>
       </Link>
       {"   "}
       <Link to="/Governoment">
         {" "}
-        <Button variant="outline-secondary">Governoment</Button>
+        <Button onClick={()=>{ props.handleBreadCrums("Governoment")}} variant="outline-secondary">Governoment</Button>
       </Link>
       {"   "}
       <Link to="/Election">
         {" "}
-        <Button variant="outline-primary">Elections</Button>
+        <Button onClick={()=>{ props.handleBreadCrums("Elections")}} variant="outline-primary">Elections</Button>
       </Link>
       {"   "}
       <Link to="/Policy">
         {" "}
-        <Button variant="outline-dark">Policy</Button>
+        <Button onClick={()=>{ props.handleBreadCrums("Policy")}} variant="outline-dark">Policy</Button>
       </Link>
       {"   "}
       <Link to="/About">
         {" "}
-        <Button variant="outline-warning">About</Button>
+        <Button onClick={()=>{ props.handleBreadCrums("About")}} variant="outline-warning">About</Button>
       </Link>
       {"   "}
       <br /> <br />

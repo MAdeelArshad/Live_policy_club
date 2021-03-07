@@ -17,17 +17,23 @@ import { Component } from "react";
 
 class App extends Component {
   state = {
+          currentBreadCrum: "",
         bills: [],
         profiles: []
 
   };
+
+  handleBreadCrums = (BreadCrum) => {
+this.setState({currentBreadCrum: BreadCrum})
+}
+
   render() {
     return (
       <Router>
         <div className="App">
           <NavBar />
-          <Breadcrumb />
-          <MenuBar />
+          <Breadcrumb currentPage={this.state.currentBreadCrum} />
+          <MenuBar handleBreadCrums={this.handleBreadCrums} />
         </div>
 
         <Switch>

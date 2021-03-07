@@ -1,8 +1,9 @@
 import { Breadcrumb } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const BreadCrum = () => {
+const BreadCrum = (props) => {
   return (
+    
     <Breadcrumb>
       <Breadcrumb.Item>
         <Link to="/Home">Home</Link>
@@ -10,7 +11,7 @@ const BreadCrum = () => {
       {/* <Breadcrumb.Item href="">
   Library
 </Breadcrumb.Item> */}
-      <Breadcrumb.Item active>Governoment</Breadcrumb.Item>
+      <Breadcrumb.Item active>{props.currentPage}</Breadcrumb.Item>
     </Breadcrumb>
   );
 };
