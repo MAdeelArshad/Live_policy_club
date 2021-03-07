@@ -1,6 +1,5 @@
-import MenuBar from "../MenuBar";
-import NavBar from "../NavBar";
-import { Breadcrumb } from "../BreadCrum";
+
+
 
 const Home = () => {
   return (

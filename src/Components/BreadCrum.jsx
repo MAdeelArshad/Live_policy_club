@@ -5,7 +5,7 @@ const BreadCrum = (props) => {
   return (
     
     <Breadcrumb>
-      <Breadcrumb.Item>
+      <Breadcrumb.Item onClick = {()=>props.handleBreadCrums("")}>
         <Link to="/Home">Home</Link>
       </Breadcrumb.Item>
       {/* <Breadcrumb.Item href="">

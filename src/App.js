@@ -5,7 +5,7 @@ import Breadcrumb from "./Components/BreadCrum";
 import MenuBar from "./Components/MenuBar";
 import Governoment from "./Components/Pages/Governoment";
 // import Policy from './Components/Pages/Policy';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Elections from "./Components/Pages/Elections";
 import UserProfile from "./Components/Pages/UserProfile";
 import Policy from "./Components/Pages/Policy";
@@ -14,6 +14,7 @@ import Home from "./Components/Pages/Home";
 import Search from "./Components/Pages/Search";
 import About from "./Components/Pages/About Page";
 import { Component } from "react";
+import axios from "axios";
 
 class App extends Component {
   state = {
@@ -23,6 +24,17 @@ class App extends Component {
 
   };
 
+
+  componentDidMount() {
+    // Axios Request
+    // axios.get(`URL`)
+    //   .then(res => {
+    //     const persons = res.data;
+    //     this.setState({ persons });
+    //   })
+
+  }
+
   handleBreadCrums = (BreadCrum) => {
 this.setState({currentBreadCrum: BreadCrum})
 }
@@ -31,13 +43,13 @@ this.setState({currentBreadCrum: BreadCrum})
     return (
       <Router>
         <div className="App">
-          <NavBar />
-          <Breadcrumb currentPage={this.state.currentBreadCrum} />
+          <NavBar handleBreadCrums={this.handleBreadCrums} />
+          <Breadcrumb currentPage={this.state.currentBreadCrum} handleBreadCrums={this.handleBreadCrums} />
           <MenuBar handleBreadCrums={this.handleBreadCrums} />
         </div>
 
         <Switch>
-          <Route path="/Private">{/* <Governoment /> */}</Route>
+          <Route path="/Private"><Public /></Route>
           <Route path="/Public">
             <Public />
           </Route>
