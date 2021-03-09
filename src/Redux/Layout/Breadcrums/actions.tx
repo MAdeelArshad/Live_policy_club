@@ -1,0 +1,8 @@
+import {SET_BREADCRUMS_VALUE,SET_BREADCRUMS_VALUE} from './types';
+
+export const breadcrumsValue = (value: string) => {
+  return {
+    type: SET_BREADCRUMS_VALUE,
+    payload: { value },
+  };
+};
