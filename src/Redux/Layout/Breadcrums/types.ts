@@ -1,5 +1,5 @@
-export interface BreadcrumsState {
-  breadCrumbValue: string;
+export interface breadcrumsState {
+  breadcrumsValue: string;
 }
 
 export interface actionPaylodType {

@@ -13,74 +13,69 @@ import Public from "./Components/Pages/Public";
 import Home from "./Components/Pages/Home";
 import Search from "./Components/Pages/Search";
 import About from "./Components/Pages/About Page";
-import { Component } from "react";
-import axios from "axios";
 
-class App extends Component {
-  state = {
-          currentBreadCrum: "",
-        bills: [],
-        profiles: []
+const app = () => {
+  return (
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Breadcrumb />
+        <MenuBar />
+      </div>
 
-  };
+      <Switch>
+        <Route path="/Private">
+          <Public />
+        </Route>
+        <Route path="/Public">
+          <Public />
+        </Route>
+        <Route path="/Governoment">
+          <Governoment />
+        </Route>
+        <Route path="/Election">
+          <Elections />
+        </Route>
+        <Route path="/Policy">
+          <Policy />
+        </Route>
+        <Route path="/UserProfile">
+          <UserProfile />
+        </Route>
+        <Route path="/Search">
+          <Search />
+        </Route>
+        <Route path="/About">
+          <About />
+        </Route>
+        <Route path="/Home">
+          <Home />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
+};
 
+export default app;
 
-  componentDidMount() {
-    // Axios Request
-    // axios.get(`URL`)
-    //   .then(res => {
-    //     const persons = res.data;
-    //     this.setState({ persons });
-    //   })
+// class App extends Component {
 
-  }
+//   componentDidMount() {
+//     // Axios Request
+//     // axios.get(`URL`)
+//     //   .then(res => {
+//     //     const persons = res.data;
+//     //     this.setState({ persons });
+//     //   })
+//   }
 
-  handleBreadCrums = (BreadCrum) => {
-this.setState({currentBreadCrum: BreadCrum})
-}
+//   render() {
+//     return (
+//     );
+//   }
+// }
 
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <NavBar handleBreadCrums={this.handleBreadCrums} />
-          <Breadcrumb currentPage={this.state.currentBreadCrum} handleBreadCrums={this.handleBreadCrums} />
-          <MenuBar handleBreadCrums={this.handleBreadCrums} />
-        </div>
-
-        <Switch>
-          <Route path="/Private"><Public /></Route>
-          <Route path="/Public">
-            <Public />
-          </Route>
-          <Route path="/Governoment">
-            <Governoment />
-          </Route>
-          <Route path="/Election">
-            <Elections />
-          </Route>
-          <Route path="/Policy">
-            <Policy />
-          </Route>
-          <Route path="/UserProfile">
-            <UserProfile />
-          </Route>
-          <Route path="/Search">
-            <Search />
-          </Route>
-          <Route path="/About">
-            <About />
-          </Route>
-          <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </Router>
-    );
-  }
-}
-
-export default App;
+// export default App;
