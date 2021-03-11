@@ -12,6 +12,7 @@ const initialState: IAppState = {
   breadcrumsState: {
     breadcrumsValue: "",
   },
+  
 };
 const middleware = [thunk];
 const store = createStore(
@@ -20,3 +21,5 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(...middleware))
 );
 export default store;
+
+

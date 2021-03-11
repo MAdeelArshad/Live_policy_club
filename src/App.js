@@ -13,6 +13,7 @@ import Public from "./Components/Pages/Public";
 import Home from "./Components/Pages/Home";
 import Search from "./Components/Pages/Search";
 import About from "./Components/Pages/About Page";
+import Login from "./Components/Pages/Login";
 
 const app = () => {
   return (
@@ -52,7 +53,7 @@ const app = () => {
           <Home />
         </Route>
         <Route path="/">
-          <Home />
+          <Login />
         </Route>
       </Switch>
     </Router>
