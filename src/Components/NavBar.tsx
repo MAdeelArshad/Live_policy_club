@@ -32,13 +32,13 @@ const NavBar = () => {
         className="justify-content-end"
         style={{ color: "wheat" }}
       >
-        <Link to="/Search" onClick={() => handleBreadCrums("Search")}>
+        <Link to="/Search" onClick={() => handleBreadCrums((localStorage.getItem("JWT-Token")? "Search": ""))}>
           <IconButton aria-label="search" color="inherit">
             <SearchIcon />
           </IconButton>
         </Link>
 
-        <Link to="/UserProfile" onClick={() => handleBreadCrums("Profile")}>
+        <Link to="/UserProfile" onClick={() => handleBreadCrums((localStorage.getItem("JWT-Token")? "Profile": ""))}>
           <img
             src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
             alt="Profile Pic"

@@ -74,7 +74,13 @@ const Login = (props) => {
             localStorage.setItem('User-Profile-Pic-Url', res.data.user.Image.formats.thumbnail.url);
             dispatch(setUserValue(user));
 
-            // <Redirect to="/Home" />
+            
+
+            if(localStorage.getItem('JWT-Token')){
+              // <Redirect to="/Home" />
+              window.location = "/Home"
+            }
+              
 
 
         })

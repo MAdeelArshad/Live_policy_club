@@ -5,7 +5,7 @@ import Breadcrumb from "./Components/BreadCrum";
 import MenuBar from "./Components/MenuBar";
 import Governoment from "./Components/Pages/Governoment";
 // import Policy from './Components/Pages/Policy';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import Elections from "./Components/Pages/Elections";
 import UserProfile from "./Components/Pages/UserProfile";
 import Policy from "./Components/Pages/Policy";
@@ -25,33 +25,67 @@ const app = () => {
       </div>
 
       <Switch>
-        <Route path="/Private">
-          <Public />
-        </Route>
-        <Route path="/Public">
-          <Public />
-        </Route>
-        <Route path="/Governoment">
-          <Governoment />
-        </Route>
-        <Route path="/Election">
-          <Elections />
-        </Route>
-        <Route path="/Policy">
-          <Policy />
-        </Route>
-        <Route path="/UserProfile">
-          <UserProfile />
-        </Route>
-        <Route path="/Search">
-          <Search />
-        </Route>
-        <Route path="/About">
-          <About />
-        </Route>
-        <Route path="/Home">
-          <Home />
-        </Route>
+        <Route path="/Private"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Public />;
+          }
+        } />
+
+        <Route path="/Public"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Public />;
+          }
+        } />
+
+        <Route path="/Governoment"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Governoment />;
+          }
+        } />
+
+        <Route path="/Election"   render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Elections />;
+          }
+        } />
+
+        <Route path="/Policy"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Policy />;
+          }
+        } />
+        <Route path="/UserProfile"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <UserProfile />;
+          }
+        } />
+        <Route path="/Search"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Search />;
+          }
+        } />
+
+        <Route path="/About"  render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <About />;
+          }
+        } />
+
+        <Route path="/Home"   render={
+          props => {
+            if(!localStorage.getItem('JWT-Token')) return <Redirect to="/" />;
+            return <Home />;
+          }
+        } />
+
         <Route path="/">
           <Login />
         </Route>

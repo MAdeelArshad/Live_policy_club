@@ -17,7 +17,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("Private");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "Private": ""));
           }}
           variant="outline-danger"
         >
@@ -29,7 +29,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("Public");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "Public": ""));
           }}
           variant="outline-success"
         >
@@ -41,7 +41,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("Governoment");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "Governoment": ""));
           }}
           variant="outline-secondary"
         >
@@ -53,7 +53,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("Elections");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "Election": ""));
           }}
           variant="outline-primary"
         >
@@ -65,7 +65,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("Policy");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "Policy": ""));
           }}
           variant="outline-dark"
         >
@@ -77,7 +77,7 @@ const MenuBar = () => {
         {" "}
         <Button
           onClick={() => {
-            handleBreadCrums("About");
+            handleBreadCrums((localStorage.getItem("JWT-Token")? "About": ""));
           }}
           variant="outline-warning"
         >
