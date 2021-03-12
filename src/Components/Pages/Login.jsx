@@ -6,6 +6,8 @@ import { Link, Redirect } from "react-router-dom";
 import Axios from "axios";
 import { Alert, Spinner } from "reactstrap";
 import { useDispatch } from "react-redux";
+import { UserStateType } from "../../Redux/Layout/Breadcrums/types";
+import { setUserValue } from "../../Redux/Layout/Breadcrums/actions";
 // import StoreContext from "../../context/Store";
 
 const Login = (props) => {
@@ -50,10 +52,10 @@ const Login = (props) => {
         }
       )
         .then((res) => {
-          localStorage.setItem(
-            process.env.REACT_APP_ACCESS_TOKEN,
-            res.data.jwt
-          );
+          // localStorage.setItem(
+          //   process.env.REACT_APP_ACCESS_TOKEN,
+          //   res.data.jwt
+          // );
           // context.setUser(res.data.user);
           setLoading(false);
           console.log(res);
@@ -68,7 +70,9 @@ const Login = (props) => {
               category: res.data.user.catagoery 
             };
 
-            // dispatch(user);
+            localStorage.setItem('JWT-Token', res.data.jwt);
+            localStorage.setItem('User-Profile-Pic-Url', res.data.user.Image.formats.thumbnail.url);
+            dispatch(setUserValue(user));
 
             // <Redirect to="/Home" />
 
@@ -76,7 +80,7 @@ const Login = (props) => {
         })
         .catch((error) => {
           let e = [];
-          console.log("Error: " + error);
+          console.log("Error: " + error.response);
           const arr = error.response.data.messages[0].message;
 
           for (const m of arr) {
@@ -92,8 +96,10 @@ const Login = (props) => {
 
     
   };
-  if (!localStorage.getItem(process.env.REACT_APP_ACCESS_TOKEN)) {
-    return <Redirect to="/" />;
+  if (localStorage.getItem('JWT-Token')) {
+    console.log("Local Storage Token: " + localStorage.getItem('JWT-Token'));
+    console.log("Local Storage User: " + localStorage.getItem('User-Profile-Pic-Url'));
+    return <Redirect to="/Home" />;
   } else {
     return (
       <>

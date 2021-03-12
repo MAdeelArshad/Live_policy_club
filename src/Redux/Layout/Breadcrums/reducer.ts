@@ -2,11 +2,12 @@ import {
   SET_BREADCRUMS_VALUE,
   breadcrumsState,
   breadcrumsActionType,
-  UserActionPayloadType,
+  UserStateType,
   UserActionType,
   SET_USER_BIO_VALUE,
   SET_USER_VALUE,
 } from "./types";
+import _ from "lodash";
 
 const breadcrumsInitialState: breadcrumsState = {
   breadcrumsValue: "",
@@ -33,8 +34,8 @@ export default breadcrumsReducer;
 
 //  User info Reducer
 
-const UserInfoInitialState: UserActionPayloadType = {
-    id: 0,
+export const UserInfoInitialState: UserStateType = {
+    id: "",
     username: "",
     email: "",
     bio: "",
@@ -44,20 +45,12 @@ const UserInfoInitialState: UserActionPayloadType = {
 };
 
 
-export const UserInfoReducer = (state: UserActionPayloadType = UserInfoInitialState, action: UserActionType): UserActionPayloadType => {
+export const UserInfoReducer = (state: UserStateType = UserInfoInitialState, action: UserActionType): UserStateType => {
     console.log(action.payload);
+    
     switch(action.type){
 
-      case SET_USER_VALUE: return {...UserInfoInitialState, 
-        id: action.payload.id,
-        username: action.payload.username,
-        email: action.payload.email,
-        bio: action.payload.bio,
-        rank: action.payload.rank,
-        partyline: action.payload.partyline,
-        category: action.payload.category
-      
-      }
+      case SET_USER_VALUE: return action.payload
 
 
 

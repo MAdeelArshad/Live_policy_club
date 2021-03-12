@@ -1,4 +1,4 @@
-import { breadcrumsActionType, SET_BREADCRUMS_VALUE, SET_USER_BIO_VALUE, SET_USER_CATEGORY_VALUE, SET_USER_PARTY_VALUE, SET_USER_RANK_VALUE, SET_USER_VALUE, UserActionPayloadType, UserActionType } from "./types";
+import { breadcrumsActionType, SET_BREADCRUMS_VALUE, SET_USER_BIO_VALUE, SET_USER_CATEGORY_VALUE, SET_USER_PARTY_VALUE, SET_USER_RANK_VALUE, SET_USER_VALUE, UserStateType, UserActionType } from "./types";
 
 export const changeBreadcrumsValue = (
   breadCrumbValue: string
@@ -13,7 +13,7 @@ export const changeBreadcrumsValue = (
 // User Actions
 
 export const setUserValue = ( 
-  userState: UserActionPayloadType
+  userState: UserStateType
   ): UserActionType => {
     return {
       type: SET_USER_VALUE,
@@ -23,7 +23,7 @@ export const setUserValue = (
 
 
 export const changeBioValue = ( 
-  userState: UserActionPayloadType
+  userState: UserStateType
   ): UserActionType => {
     return {
       type: SET_USER_BIO_VALUE,
@@ -32,7 +32,7 @@ export const changeBioValue = (
   }
 
   export const changeRankValue = ( 
-    userState: UserActionPayloadType
+    userState: UserStateType
     ): UserActionType => {
       return {
         type: SET_USER_RANK_VALUE,
@@ -41,7 +41,7 @@ export const changeBioValue = (
     }
 
     export const changePartylineValue = ( 
-      userState: UserActionPayloadType
+      userState: UserStateType
       ): UserActionType => {
         return {
           type: SET_USER_PARTY_VALUE,
@@ -50,7 +50,7 @@ export const changeBioValue = (
       }
 
       export const changeCategoryValue = ( 
-        userState: UserActionPayloadType
+        userState: UserStateType
         ): UserActionType => {
           return {
             type: SET_USER_CATEGORY_VALUE,

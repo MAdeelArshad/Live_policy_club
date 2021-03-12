@@ -51,8 +51,8 @@ export const SET_USER_CATEGORY_VALUE: string = "SET_USER_CATEGORY_VALUE";
 
 
 
-export interface UserActionPayloadType {
-    id: number;
+export interface UserStateType {
+    id: string;
     username: string;
     email: string;
     bio: string;
@@ -64,6 +64,6 @@ export interface UserActionPayloadType {
 
 export interface UserActionType {
   type: typeof SET_USER_BIO_VALUE;
-  payload: UserActionPayloadType;
+  payload: UserStateType;
 }
 
