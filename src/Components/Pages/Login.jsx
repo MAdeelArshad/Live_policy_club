@@ -6,8 +6,9 @@ import { Link, Redirect } from "react-router-dom";
 import Axios from "axios";
 import { Alert, Spinner } from "reactstrap";
 import { useDispatch } from "react-redux";
-import { UserStateType } from "../../Redux/Layout/Breadcrums/types";
-import { setUserValue } from "../../Redux/Layout/Breadcrums/actions";
+import { setUserValue } from "../../Redux/Functionalities/UserInfo/actions";
+import { changeProfilePic } from "../../Redux/Functionalities/ProfilePic/actions";
+
 // import StoreContext from "../../context/Store";
 
 const Login = (props) => {
@@ -73,7 +74,7 @@ const Login = (props) => {
             localStorage.setItem('JWT-Token', res.data.jwt);
             localStorage.setItem('User-Profile-Pic-Url', res.data.user.Image.formats.thumbnail.url);
             dispatch(setUserValue(user));
-
+            dispatch(changeProfilePic(true));
             
 
             if(localStorage.getItem('JWT-Token')){
@@ -97,6 +98,7 @@ const Login = (props) => {
 
           setErrors(e);
           setLoading(false);
+          dispatch(changeProfilePic(false));
         });
     }
 

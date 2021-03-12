@@ -1,7 +1,10 @@
 import { combineReducers } from "redux";
-import breadcrumsReducer, { UserInfoReducer } from "./Layout/Breadcrums/reducer";
+import { ProfilePicReducer } from "./Functionalities/ProfilePic/reducer";
+import { UserInfoReducer } from "./Functionalities/UserInfo/reducer";
+import breadcrumsReducer from "./Layout/Breadcrums/reducer";
 const rootReducer = combineReducers({
   breadcrumsState: breadcrumsReducer,
-  UserInfoState: UserInfoReducer
+  UserInfoState: UserInfoReducer,
+  ProfilePicState: ProfilePicReducer
 });
 export default rootReducer;

@@ -40,7 +40,9 @@ const NavBar = () => {
 
         <Link to="/UserProfile" onClick={() => handleBreadCrums((localStorage.getItem("JWT-Token")? "Profile": ""))}>
           <img
-            src="https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+            src= {localStorage.getItem("JWT-Token")? 
+            "http://localhost:1337" + localStorage.getItem("User-Profile-Pic-Url") :
+             "https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"}
             alt="Profile Pic"
             width="50em"
             height="50em"
