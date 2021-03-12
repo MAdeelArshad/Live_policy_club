@@ -62,7 +62,7 @@ const UserProfile = () => {
 
         <div className="row" style={{margin: "0px"}}  >
 <div className="col-md-1"></div>
-       <div className="col-md-10" style={{border: "1px solid green",borderRadius: "50px", backgroundColor: "white", width: "100%", padding: "1%", margin: "0px"}}>
+       <div className="col-md-10" style={{border: "1px solid blue",borderRadius: "50px", backgroundColor: "white", width: "100%", padding: "1%", margin: "0px"}}>
        
 
 <center>

@@ -6,7 +6,7 @@ const CreateBill = () => {
         
      
 
-<div style={{border: "1px solid green", borderRadius: "100px", backgroundColor: "white", width: "80%", textAlign: "left", padding: "3%"}} >
+<div style={{border: "1px solid blue", borderRadius: "100px", backgroundColor: "white", width: "80%", textAlign: "left", padding: "3%"}} >
 <h3><i>Bill Title:</i></h3>
 <input type="text"/> &nbsp;
 <button className="btn btn-primary" >Save</button>

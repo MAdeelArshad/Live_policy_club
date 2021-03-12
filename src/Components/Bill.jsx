@@ -8,9 +8,9 @@ const Bill = () => {
 
 <div className="row" style={{margin: "5px"}} >
 
-<div className="col-md-9" style={{textAlign: "left"}} >
+<div className="col-md-9"  style={{textAlign: "left"}} >
 
-<h1><i>Bill Name</i></h1>
+<h1 style={{color: "#660066"}} className="font-style"><i>Bill Name</i></h1>
 <h3><i>Bill Number</i></h3>
 <p>Bill Description</p>
 

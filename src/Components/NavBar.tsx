@@ -3,6 +3,7 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import "./ComponentStyles.css";
 
 import { changeBreadcrumsValue } from "../Redux/Layout/Breadcrums/actions";
 
@@ -15,10 +16,10 @@ const NavBar = () => {
     dispatch(changeBreadcrumsValue(value));
   };
   return (
-    <Navbar bg="dark">
+    <Navbar className="nav-bar" >
       <Link to="/Home" onClick={() => handleBreadCrums("")}>
-        <Navbar.Brand href="#home" style={{ color: "wheat" }}>
-          <h3>Grovrr</h3>
+        <Navbar.Brand href="#home"  > 
+          <h3 className="brand-name" style={{color:"#ff66ff"}} >Grovrr</h3>
         </Navbar.Brand>
       </Link>
 
@@ -33,13 +34,13 @@ const NavBar = () => {
         style={{ color: "wheat" }}
       >
         <Link to="/Search" onClick={() => handleBreadCrums((localStorage.getItem("JWT-Token")? "Search": ""))}>
-          <IconButton aria-label="search" color="inherit">
+          <IconButton aria-label="search" color="inherit" style={{color: "#ff66ff"}}>
             <SearchIcon />
           </IconButton>
         </Link>
 
         <Link to="/UserProfile" onClick={() => handleBreadCrums((localStorage.getItem("JWT-Token")? "Profile": ""))}>
-          <img
+          <img className="img img-circle "
             src= {localStorage.getItem("JWT-Token")? 
             "http://localhost:1337" + localStorage.getItem("User-Profile-Pic-Url") :
              "https://www.pngkey.com/png/full/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"}

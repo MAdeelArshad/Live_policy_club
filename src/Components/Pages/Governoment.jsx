@@ -9,9 +9,9 @@ const Governoment = () => {
     
     <center>
     <CompactProfile />
-    <hr />
+    <hr style={{backgroundColor: "DodgerBlue"}} />
     <CompactProfile />
-    <hr />
+    <hr style={{backgroundColor: "DodgerBlue"}} />
     <CompactProfile />
     </center>
         </div>

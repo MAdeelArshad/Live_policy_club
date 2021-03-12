@@ -15,7 +15,7 @@ const MenuBar = () => {
     <>
       <Link to="/Private">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "Private": ""));
           }}
@@ -27,7 +27,7 @@ const MenuBar = () => {
       {"   "}
       <Link to="/Public">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "Public": ""));
           }}
@@ -39,7 +39,7 @@ const MenuBar = () => {
       {"   "}
       <Link to="/Governoment">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "Governoment": ""));
           }}
@@ -51,7 +51,7 @@ const MenuBar = () => {
       {"   "}
       <Link to="/Election">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "Election": ""));
           }}
@@ -63,7 +63,7 @@ const MenuBar = () => {
       {"   "}
       <Link to="/Policy">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "Policy": ""));
           }}
@@ -75,7 +75,7 @@ const MenuBar = () => {
       {"   "}
       <Link to="/About">
         {" "}
-        <Button
+        <Button className="font-style menu-buttons"
           onClick={() => {
             handleBreadCrums((localStorage.getItem("JWT-Token")? "About": ""));
           }}

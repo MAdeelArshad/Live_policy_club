@@ -113,7 +113,7 @@ const Login = (props) => {
       <>
         <div className="d-flex justify-content-center align-items-center vh-100">
           <div className="card shadow" id="cardLogin">
-            <div className="card-header text-primary">Login</div>
+            <div className="card-header text-primary font-style"><b><i>Login Portal</i></b></div>
             <div className="card-body">
               {errors &&
                 errors.map((error, i) => (

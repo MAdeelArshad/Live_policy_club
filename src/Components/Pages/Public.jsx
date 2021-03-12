@@ -5,9 +5,7 @@ const Public = () => {
   const divStyle = {
     lineHeight: "75px",
     backgroundColor: "#f1f1f1",
-    width: "10%",
-    marginLeft: "10%",
-    marginRight: "10%",
+    width:"5%", marginLeft: "7%", marginRight: "7%",
 
     marginTop: "1%",
     marginBottom: "1%",
@@ -23,7 +21,7 @@ const Public = () => {
         <div className="col-md-1"> </div>
 
         <div className="col-md-2">
-          <h3>
+          <h3 className="font-style">
             <b>Elects</b>
           </h3>
 
@@ -59,7 +57,7 @@ const Public = () => {
         </div>
 
         <div className="col-md-8">
-          <h3>
+          <h3 className="font-style">
             <b>Runners</b>
           </h3>
 

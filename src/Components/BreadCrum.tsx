@@ -15,12 +15,12 @@ const BreadCrum = () => {
   return (
     <Breadcrumb>
       <Breadcrumb.Item onClick={() => handleBreadCrums("")}>
-        <Link to="/Home">Home</Link>
+        <Link to={(localStorage.getItem('JWT-Token'))? "/Home": "/"} className="font-style" > {(localStorage.getItem('JWT-Token'))? "Home": "Login"} </Link>
       </Breadcrumb.Item>
       {/* <Breadcrumb.Item href="">
   Library
 </Breadcrumb.Item> */}
-      <Breadcrumb.Item active>{breadcrumsValue}</Breadcrumb.Item>
+      <Breadcrumb.Item active className="font-style" >{breadcrumsValue}</Breadcrumb.Item>
     </Breadcrumb>
   );
 };
